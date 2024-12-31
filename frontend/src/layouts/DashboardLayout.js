@@ -108,7 +108,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 export default function DashboardLayout() {
     const theme = useTheme();
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [profile, setProfile] = React.useState({});
 
@@ -217,7 +217,7 @@ export default function DashboardLayout() {
                         variant="h5"
                         noWrap
                         component="a"
-                        href="/"
+                        href="/process"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
@@ -244,7 +244,7 @@ export default function DashboardLayout() {
                             variant="h5"
                             noWrap
                             component="a"
-                            href="/"
+                            href="/process"
                             sx={[{
                                 mr: 2,
                                 // display: { xs: 'flex', md: 'none' },
@@ -313,7 +313,7 @@ export default function DashboardLayout() {
                         variant="h6"
                         noWrap
                         component="a"
-                        href="/"
+                        href="/process"
                         sx={{
                             mr: 2,
                             // display: { xs: 'none', md: 'flex' },

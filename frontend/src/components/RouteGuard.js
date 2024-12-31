@@ -69,7 +69,7 @@ const PublicRoute = ({ children }) => {
 
     if (isAuthenticated === null) return <Loader />;
 
-    return isAuthenticated ? <Navigate to="/" /> : children;
+    return isAuthenticated ? <Navigate to="/process" /> : children;
 };
 
 export { PrivateRoute, PublicRoute };

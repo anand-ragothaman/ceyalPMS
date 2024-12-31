@@ -75,7 +75,7 @@ export default function SignIn(props) {
             .then(function (response) {
                 localStorage.setItem('authToken', response.data.token);
                 toast.success(response.data.message);
-                navigate('/');
+                navigate('/process');
             })
             .catch(function (error) {
                 toast.error(error.response.data.message);

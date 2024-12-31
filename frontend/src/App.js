@@ -6,12 +6,14 @@ import SignIn from "./pages/auth/SignIn";
 import SignUp from "./pages/auth/SignUp";
 import Process from "./pages/process/Process";
 import ProcessSettings from "./pages/process/ProcessSettings";
+import HomePage from "./pages/HomePage";
 
 
 function App() {
   return (
     <>
       <Routes>
+        <Route index element={<HomePage />} />
         <Route path="/sign-up" element={
           <PublicRoute>
             <SignUp />
@@ -28,7 +30,6 @@ function App() {
             <DashboardLayout />
           </PrivateRoute>
         }>
-          <Route path="/" element={<Process />} />
           <Route path="/process" element={<Process />} />
           <Route path="/process-settings" element={<ProcessSettings />} />
         </Route>

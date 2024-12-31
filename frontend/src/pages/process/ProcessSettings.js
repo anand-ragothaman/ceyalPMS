@@ -142,10 +142,10 @@ const ProcessSettings = () => {
                 handleDialogClose();
             })
             .catch(function (error) {
-                // if (error.response.status === 401) {
-                //     localStorage.removeItem("authToken");
-                //     navigate("/sign-in");
-                // }
+                if (error.response.status === 401) {
+                    localStorage.removeItem("authToken");
+                    navigate("/sign-in");
+                }
                 toast.error(error.response.data.message);
             });
     };
